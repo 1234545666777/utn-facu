@@ -14,7 +14,7 @@ body{
     width: 100%;
 }
 
-input, textarea{
+input, textarea, select{
     font-family: "poppins", sans-serif !important;
 }
 
@@ -153,6 +153,7 @@ section .title{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    min-height: 150vh;
 }
 
 .cont__gallery{
@@ -174,6 +175,7 @@ section .title{
 }
 
 #contact__cont{
+    min-height: 150vh;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -194,6 +196,16 @@ form {
 
 .form__contact__item{
     width: 100%;
+}
+
+.form__contact__item.radio {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form__contact__item.radio label{
+    margin-bottom: 0;
 }
 
 .form__contact__item label {
