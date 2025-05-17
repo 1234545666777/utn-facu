@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -8,6 +12,10 @@ body{
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+}
+
+input, textarea{
+    font-family: "poppins", sans-serif !important;
 }
 
 #video_bg {
@@ -124,7 +132,7 @@ section .title{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    height: 80vh;
+    min-height: 80vh;
     border-radius: 40px;
     background-color: #E8F5E9;
     margin-bottom: 2cm;
@@ -137,6 +145,96 @@ section .title{
 
 .bg-sec .text{
     font-size: 20px;
+}
+
+/* Gallery */
+
+#gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cont__gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cont__gallery img{
+    border-radius: 20px;
+    height: 400px;
+    width: 100%;
+    transition: .3s ease;
+}
+
+.cont__gallery img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px 0 #3DDC84;
+}
+
+#contact__cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form {
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #dadce0;
+    display: flex;
+    gap: 20px;
+}
+
+.form__contact__item{
+    width: 100%;
+}
+
+.form__contact__item label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #202124;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #dadce0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3DDC84;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.75rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark {
+    background-color: #202124;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #3c4043;    
 }
 
 footer{
@@ -164,13 +262,13 @@ footer hr{
     gap: 20px;
 }
 
-.footer__redes a{
+footer a{
     color: #7a7a7a;
     transition: .3s ease;
     text-decoration: none;
 }
 
-.footer__redes a:hover{
+footer a:hover{
     color: #3DDC84;
 }
 
